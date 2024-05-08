@@ -1,12 +1,76 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <!---
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-        ---->
-        <img src="https://tenor.com/view/rick-roll-gif-23595798.gif" alt="bruh"/>
-    </body>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Turan Blog</title>
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         .footer {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            text-align: right;
+         }
+      </style>
+   </head>
+   <body>
+      <script>
+         // Check if the user is logged in and update the welcome text or login button
+         document.addEventListener('DOMContentLoaded', function() {
+            var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            var username = sessionStorage.getItem('username');
+            var loginButton = document.getElementById('loginButton');
+            var welcomeText = document.getElementById('welcomeText');
+
+            if (isLoggedIn) {
+               loginButton.style.display = 'none';
+               welcomeText.textContent = 'Welcome, ' + username;
+            } else {
+               loginButton.style.display = 'inline-block';
+            }
+         });
+      </script>
+      <div>
+         <br>
+         <center>
+            <h1>Turan Çinkılıç Blog</h1>
+         </center>
+         <br>
+      </div>
+      <div class="blogs">
+         <div class="column">
+            <div class="card">
+               <a href="./posts/okul_actim.html"><img src="./turan/16132416_turan-cinkilic.jpg" alt="image" height="300" width="400"/></a>
+               <h3>Okul Açtım!</h3>
+               <p>Teknopark İstanbul'da yeni okulum açıldı!</p>
+            </div>
+         </div>
+         <div class="column">
+            <div class="card">
+               <a href="./posts/sunuma_katildim.html">
+               <img src="./turan/turan-çinkılıç-390x220.jpg" alt="image" height="300" width="400"/></a>
+               <h3>Sunuma Katıldım!</h3>
+               <p>Yılın siber güvenlik zirvesinde okulumu tanıtacak bir sunum yaptım!</p>
+            </div>
+         </div>
+      </div>
+      <div class="blogs">
+         <div class="column">
+            <div class="card">
+               <a href="./posts/ogrencilerim_geldi.html">
+               <img src="./turan/1download.jpg" height="300" width="400"/></a>
+               <h3>Öğrencilerim Geldi!</h3>
+               <p>Yeni öğrencilerime bir konuşma yapıyorum.</p>
+            </div>
+         </div>
+         <div class="column">
+            <div class="card">
+               <a href="./posts/ikinci_sene.html">
+               <img src="./turan/3download.jpg" height="300" width="400"/></a>
+               <h3>Okulumun 2. Senesi</h3>
+               <p>Zaman hızla geçmiş değil mi?</p>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
